@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrapper">
+
+  <h1>Welcome</h1>
+  <p class="journey-text">
+    This space is meant for someone special.
+  </p>
+
+  <div class="song-card">
+
+    <input type="text" id="userId" placeholder="Your ID" class="login-input">
+    <input type="password" id="password" placeholder="Password" class="login-input">
+
+    <button onclick="checkLogin()" class="primary-btn login-btn">
+      Enter
+    </button>
+
+    <p id="errorMsg" class="error-text"></p>
+
+  </div>
+
+</div>
+
+<script>
+  function checkLogin() {
+    const correctId = "athasa";
+    const correctPassword = "boo123";
+
+    const userId = document.getElementById("userId").value;
+    const password = document.getElementById("password").value;
+
+    if (userId === correctId && password === correctPassword) {
+      window.location.href = "inde.html";
+    } else {
+      document.getElementById("errorMsg").innerText =
+        "Wrong ID or Password";
+    }
+  }
+</script>
+
+</body>
+</html>
